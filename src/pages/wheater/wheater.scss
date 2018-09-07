@@ -1,33 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:900');
+
 page-wheater {
 
+  $color-1 : #000000;
+  $color-2 : #7daafb;
+
   a, a:active, a:visited {
-    color           : #000000;
+    color           : $color-1;
     text-decoration : none;
   }
 
-  .spinner {
+  h1 {
+    font-family : 'Catamaran', sans-serif;
+    font-size   : 6rem;
     text-align  : center;
   }
 
-  .weather-icon {
+  .content-ios {
+    
+    background: linear-gradient(to bottom, darken($color-2, 18%) 20%, $color-2 80%);
 
-    height            : 80px;
-    margin            : 0 auto;
-    width             : 80px;
-    background-image  : url('../../assets/img/sprite-weather.png');
+    .item-block {
+      border: 3px solid $color-2;
+    }
 
-    &.clear-day            { background-position: -262px -5px; } 
-    &.clear-night          { background-position: -505px -5px; }
-    &.rain                 { background-position: -739px -10px; } 
-    &.snow                 { background-position: -502px -141px; }
-    &.sleet                { background-position: -384px -406px; }
-    &.wind                 { background-position: -743px -393px; }
-    &.fog                  { background-position: -15px 5px; }
-    &.cloudy               { background-position: -621px 5px; }
-    &.partly-cloudy-day    { background-position: -867px 280px; }
-    &.partly-cloudy-night  { background-position: -24px 147px; }
-    &.hail                 { background-position: -22px 275px; }
-    &.thunderstorm         { background-position: -262px 405px; }
+    .spinner {
+      text-align  : center;
+    }
+  
+    .back-img {
+      font-size : 8rem; 
+      height    : 25vh;
+      position  : absolute;
+      width     : 100%;
+    }
+  
+    .weather-icon {
+  
+      height            : 80px;
+      margin            : 0 auto;
+      width             : 80px;
+      background-image  : url('../../assets/img/sprite-weather.png');
+  
+      &.clear-day            { background-position: -262px -5px; } 
+      &.clear-night          { background-position: -505px -5px; }
+      &.rain                 { background-position: -739px -10px; } 
+      &.snow                 { background-position: -502px -141px; }
+      &.sleet                { background-position: -384px -406px; }
+      &.wind                 { background-position: -743px -393px; }
+      &.fog                  { background-position: -15px 5px; }
+      &.cloudy               { background-position: -621px 5px; }
+      &.partly-cloudy-day    { background-position: -867px 280px; }
+      &.partly-cloudy-night  { background-position: -24px 147px; }
+      &.hail                 { background-position: -22px 275px; }
+      &.thunderstorm         { background-position: -262px 405px; }
+  
+    }
 
   }
 

@@ -16,17 +16,17 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <ion-grid>
+  <div class="back-img">
+    <ion-icon ios="ios-sunny" md="md-sunny"></ion-icon>
+    <ion-icon name="cloudy"></ion-icon>
+  </div>
+
+  <ion-grid padding>
     <ion-row>
       <ion-col>
         <h1>{{ 'WEATHER_TITLE' | translate }}</h1>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <p>{{ 'WEATHER_DESCRIPTION' | translate }}</p>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="!ready">
@@ -38,7 +38,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-list>
+  <ion-list padding>
     <ion-item *ngFor="let city of cities">
       <ion-thumbnail item-start>
           <div class="weather-icon {{ city.clima.icon }}"></div>

@@ -1,5 +1,5 @@
 <!--
-  Generated template for the WheaterPage page.
+  Generated template for the WeatherCityPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -9,8 +9,8 @@
   <ion-navbar>
     <ion-title>{{ 'WEATHER' | translate }}</ion-title>
     <button ion-button menuToggle end>
-        <ion-icon name="menu"></ion-icon>
-      </button>
+      <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-navbar>
 
 </ion-header>
@@ -33,7 +33,15 @@
   <ion-grid padding>
     <ion-row>
       <ion-col>
-        <h1>{{ 'WEATHER_TITLE' | translate }}</h1>
+        <h1>
+          {{ city.nombre }}
+          <small>{{ city.abreviado }}</small>
+        </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>{{ city.latLon }}</p>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="!ready">
@@ -52,31 +60,7 @@
     </ion-row>
   </ion-grid>
 
-  <ion-list padding>
-    <ion-item-sliding #item *ngFor="let city of cities">
-      <ion-item>
-        <ion-thumbnail item-start>
-            <div class="weather-icon {{ city.clima.icon }}"></div>
-        </ion-thumbnail>
-        <h2>
-          {{ city.nombre }}
-          <small>{{ city.abreviado }}</small>
-        </h2>
-        <h3>
-          {{ city.clima.temperatura }}
-          <sup>o</sup> / 
-          {{ city.clima.estado }}
-        </h3>
-        <p>
-          <ion-icon name="pin"></ion-icon>
-          {{ city.latLon }}
-        </p>
-      </ion-item>
-      <ion-item-options side="right">
-        <button ion-button color="success" (click)="getInfoCity(city)">+ Info</button>
-      </ion-item-options>
-    </ion-item-sliding>
-  </ion-list>
+  
 
   <ion-fab bottom right >
     <button ion-fab>
@@ -94,7 +78,6 @@
       </button>
     </ion-fab-list>
   </ion-fab>
-   
 
 </ion-content>
 

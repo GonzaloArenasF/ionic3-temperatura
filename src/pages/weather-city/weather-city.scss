@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:700');
 @import '../../theme/variables.scss';
 
-page-wheater {
+page-weather-city {
 
   $color-2 : color($colors, primary, base);
   $color-1 : lighten($color-2, 50%);
@@ -35,10 +35,6 @@ page-wheater {
   .content-ios {
     
     background: linear-gradient(to bottom, darken($color-2, 20%) 20%, lighten($color-2, 20%) 80%);
-
-    .item-wrapper {
-      margin-bottom: 8px;
-    }
 
     .spinner {
       text-align  : center;

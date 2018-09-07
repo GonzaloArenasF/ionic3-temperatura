@@ -26,12 +26,4 @@ export class WelcomePage {
   signup() {
     this.navCtrl.push('SignupPage');
   }
-
-  /**
-   * Acceso a la página del clima
-   */
-  getWeather () {
-    this.navCtrl.push('WheaterPage');
-  }
-
 }

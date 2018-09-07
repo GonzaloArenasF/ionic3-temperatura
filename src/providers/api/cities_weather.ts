@@ -16,7 +16,10 @@ export class CitiesWeathersApi {
   /**
    * URL del servicio DarkSky
    */
-  private url: string = 'http://localhost:3000/temperatura';
+  private url: any = {
+    allCities : 'http://localhost:3000/temperatura',
+    city      : 'http://localhost:3000/city-weather'
+  };
 
   /**
    * Constructor
@@ -28,8 +31,15 @@ export class CitiesWeathersApi {
   /**
    * Promesa para la obtención del estado climático de ciudades
    */
-  get() {
-    return this.http.get(this.url);
+  get () {
+    return this.http.get(this.url.allCities);
+  }
+
+  /**
+   * Datos de una ciudad en particular
+   */
+  getCity (coordenadas) {
+    return this.http.get(this.url.city + '/' + coordenadas);
   }
 
 }

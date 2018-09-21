@@ -63,7 +63,7 @@
           <small>{{ city.abreviado }}</small>
         </h2>
         <h3>
-          {{ city.clima.temperatura }}
+          {{ city.clima.temperatura | numberFormat }}
           <sup>o</sup> / 
           {{ city.clima.estado }}
         </h3>

@@ -48,6 +48,13 @@
   "SEARCH_TITLE": "Buscar",
 
   "WEATHER_TITLE": "El Tiempo",
-  "WEATHER_DESCRIPTION": "Obteniendo algunas de las ciudades del mundo y su estado del clima"
+  "WEATHER_DESCRIPTION": "Obteniendo datos climáticos",
+  "WEATHER_TEMPERTURE": "Temperatura",
+  "WEATHER_CLOUD": "Nubosidad",
+  "WEATHER_HUMIDITY": "Humedad",
+  "WEATHER_PRECIPIT_PROBABILITY": "Probabilidad de precipitaciones",
+  "WEATHER_PREASSURE": "Presión atmosférica",
+  "WEATHER_TIME": "Hora",
+  "WEATHER_WIND_SPEED": "Velocidade del viento"
 
 }

@@ -13,10 +13,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Apis
 import { CitiesWeathersApi } from '../../providers';
 
+// Pipes
+import { PipesModule } from '../../pipes/pipes.module';
+
+
 @IonicPage()
 @Component({
   selector: 'page-wheater',
-  templateUrl: 'wheater.html'
+  templateUrl: 'wheater.html',
+  providers: [
+    PipesModule
+  ]
 })
 export class WheaterPage {
 
@@ -33,7 +40,7 @@ export class WheaterPage {
     public navCtrl: NavController, 
     public navParams: NavParams,
     public citiesWeathersApi: CitiesWeathersApi
-  ) { }
+  ) {}
 
   /**
    * Al momento de cargar la vista

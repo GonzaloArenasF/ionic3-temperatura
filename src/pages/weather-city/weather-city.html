@@ -37,11 +37,13 @@
           {{ city.nombre }}
           <small>{{ city.abreviado }}</small>
         </h1>
+        <p>{{ city.latLon }}</p>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <p>{{ city.latLon }}</p>
+        <div class="weather-icon {{ city.clima.icon }}"></div>
+        <p></p>
       </ion-col>
     </ion-row>
     <ion-row *ngIf="!ready">
@@ -59,8 +61,15 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
   
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <div class="weather-icon {{ city.clima.icon }}"></div>
+      </ion-thumbnail>
+      <h2>{{ 'WEATHER_DESCRIPTION' | translate }}</h2>
+    </ion-item>
+  </ion-list>
 
   <ion-fab bottom right >
     <button ion-fab>

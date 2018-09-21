@@ -17,13 +17,19 @@ import { WheaterPage } from './wheater';
 // Api
 import { CitiesWeathersApi } from '../../providers';
 
+// Pipes
+import { PipesModule } from './../../pipes/pipes.module';
+import { NumberFormatPipe } from '../../pipes/number-format/number-format';
+
 @NgModule({
   declarations: [
-    WheaterPage
+    WheaterPage,
+    NumberFormatPipe
   ],
   imports: [
     IonicPageModule.forChild(WheaterPage),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    PipesModule
   ],
   exports: [
     WheaterPage

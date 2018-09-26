@@ -13,17 +13,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // Apis
 import { CitiesWeathersApi } from '../../providers';
 
-// Pipes
-import { PipesModule } from '../../pipes/pipes.module';
-
 
 @IonicPage()
 @Component({
   selector: 'page-wheater',
   templateUrl: 'wheater.html',
-  providers: [
-    PipesModule
-  ]
+  providers: []
 })
 export class WheaterPage {
 

@@ -18,8 +18,7 @@ import { WheaterPage } from './wheater';
 import { CitiesWeathersApi } from '../../providers';
 
 // Pipes
-import { PipesModule } from './../../pipes/pipes.module';
-import { NumberFormatPipe } from '../../pipes/number-format/number-format';
+import { NumberFormatPipe } from '../../pipes';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { NumberFormatPipe } from '../../pipes/number-format/number-format';
   ],
   imports: [
     IonicPageModule.forChild(WheaterPage),
-    TranslateModule.forChild(),
-    PipesModule
+    TranslateModule.forChild()
   ],
   exports: [
     WheaterPage
